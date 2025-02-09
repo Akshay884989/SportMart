@@ -39,7 +39,11 @@ class _StartupState extends State<Startup> {
                             const Color.fromARGB(255, 135, 248, 222),
                       ),
                       onPressed: () {
-                        Userlogin();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Userlogin(),
+                            ));
                       },
                       child: Text(
                         'Login',

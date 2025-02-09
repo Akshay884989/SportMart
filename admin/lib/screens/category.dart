@@ -50,10 +50,10 @@ class _CategoryState extends State<Category> {
       final response = await supabase.from('tbl_category').select();
 
       setState(() {
-isLoading = false;
+        isLoading = false;
         fetchcat = response;
       });
-    } catch         (e) {
+    } catch (e) {
       print('Error $e');
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text('Error')));
