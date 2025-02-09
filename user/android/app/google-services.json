@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "120282280174",
+    "project_id": "sport-mart-69ce1",
+    "storage_bucket": "sport-mart-69ce1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120282280174:android:0770eb7c9b49ccf9ab03ff",
+        "android_client_info": {
+          "package_name": "com.example.user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHjcrvE9IDCo-25rPatUq1lab0ynLypjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
