@@ -20,7 +20,8 @@ class _StartupState extends State<Startup> {
         width: double.infinity,
         decoration: BoxDecoration(
             color: Colors.black26,
-            image: DecorationImage(image: AssetImage('assets/fot.jpg'))),
+            image: DecorationImage(
+                image: AssetImage('assets/fot.jpg'), fit: BoxFit.cover)),
         child: Padding(
           padding: EdgeInsets.all(20),
           child: Row(
@@ -28,7 +29,8 @@ class _StartupState extends State<Startup> {
             children: [
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.deepOrange),
+                      backgroundColor:
+                          const Color.fromARGB(255, 223, 130, 102)),
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -44,7 +46,7 @@ class _StartupState extends State<Startup> {
               ),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: const Color.fromARGB(255, 223, 130, 102),
                   ),
                   onPressed: () {
                     Navigator.push(

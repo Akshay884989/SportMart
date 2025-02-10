@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:user/formvalidation/formvalidator.dart';
 import 'package:user/screen/homepage.dart';
+import 'package:user/screen/signup.dart';
 
 class Userlogin extends StatefulWidget {
   const Userlogin({super.key});
@@ -14,21 +15,13 @@ class _UserloginState extends State<Userlogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text(
-          'Login',
-          style: TextStyle(color: Colors.white),
-        ),
-        centerTitle: true,
-      ),
       body: Form(
         child: Container(
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.black,
-          ),
+              image: DecorationImage(
+                  image: AssetImage('assets/sr.avif'), fit: BoxFit.cover)),
           child: Center(
             child: Container(
               width: 400,
@@ -99,7 +92,12 @@ class _UserloginState extends State<Userlogin> {
                       keyboardType: TextInputType.visiblePassword,
                       obscureText: _isObscure,
                     ),
+                    SizedBox(
+                      height: 40,
+                    ),
                     ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black38),
                         onPressed: () {
                           Navigator.push(
                               context,
@@ -107,7 +105,31 @@ class _UserloginState extends State<Userlogin> {
                                 builder: (context) => Homepage(),
                               ));
                         },
-                        child: Text('Login'))
+                        child: Text(
+                          'Login',
+                          style: TextStyle(fontSize: 30, color: Colors.red),
+                        )),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('I dont have an account?..'),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Signup(),
+                                  ));
+                            },
+                            child: Text("Signup"))
+                      ],
+                    )
                   ],
                 ),
               ),
